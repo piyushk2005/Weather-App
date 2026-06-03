@@ -26,7 +26,6 @@ If you are developing a production application, we recommend using TypeScript wi
 [![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_Site-4A90D9?style=for-the-badge)](https://piyushk2005.github.io/Weather-App/)
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![OpenWeatherMap](https://img.shields.io/badge/API-OpenWeatherMap-orange?style=for-the-badge)](https://openweathermap.org/)
 [![GitHub Pages](https://img.shields.io/badge/Deployed-GitHub_Pages-222?style=for-the-badge&logo=github)](https://pages.github.com/)
 
 </div>
