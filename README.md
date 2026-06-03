@@ -34,24 +34,9 @@ If you are developing a production application, we recommend using TypeScript wi
 
 ## 📽️ Demo
 
-> 🎬 **Video walkthrough coming soon!**
->
-> To add your demo video:
-> 1. Record a screen capture of the app
-> 2. Upload it to YouTube or any video platform
-> 3. Replace this section with the embed below:
-
 ```md
-[![Weather App Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![Weather App Demo](https://github.com/piyushk2005/Weather-App/blob/main/assets/demo.gif.gif)
 ```
-
-> Or drop a GIF directly into the repo (`assets/demo.gif`) and use:
-
-```md
-![Demo](assets/demo.gif)
-```
-
----
 
 ## 🖼️ Screenshots
 
