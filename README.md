@@ -38,16 +38,6 @@ If you are developing a production application, we recommend using TypeScript wi
 [![Weather App Demo](https://github.com/piyushk2005/Weather-App/blob/main/assets/demo.gif.gif)
 ```
 
-## 🖼️ Screenshots
-
-> Add screenshots by creating an `assets/` folder in your repo and uploading images:
-
-| Search City | Weather Result |
-|-------------|----------------|
-| ![Search](assets/screenshot-search.png) | ![Result](assets/screenshot-result.png) |
-
----
-
 ## ✨ Features
 
 - 🔍 **Search any city** worldwide by name
