@@ -5,6 +5,7 @@ import WeatherCard from './components/WeatherCard'
 import Loader from './components/Loader'
 
 const apikey = import.meta.env.VITE_API_KEY
+console.log("API Key:", apikey)
 
 function App() {
   const [weather, setWeather] = useState(null)
