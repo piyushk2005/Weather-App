@@ -18,32 +18,9 @@
 
 ## 📽️ Demo
 
-<!-- ============================================================
-     HOW TO ADD YOUR GIF/VIDEO:
-
-     STEP 1 — Record your screen:
-       • Windows: Press Win + G to open Xbox Game Bar → click Record
-       • Or use: https://screentogif.com (free, exports .gif directly)
-       • Or use: https://www.loom.com (free screen recorder)
-
-     STEP 2 — Convert to GIF (if needed):
-       • Upload MP4 to https://ezgif.com/video-to-gif
-       • Keep it under 10MB for GitHub to display properly
-       • Recommended size: 800x500px, 15fps
-
-     STEP 3 — Add to your repo:
-       • In VS Code, create a folder: assets/
-       • Put your file in: assets/demo.gif
-       • Run in terminal:
-           git add assets/demo.gif
-           git commit -m "Add demo gif"
-           git push origin main
-
-     STEP 4 — The line below will show it automatically ✅
-     ============================================================ -->
 
 <div align="center">
-  <img src="assets/demo.gif" alt="Weather App Demo" width="600" />
+  <img src="https://github.com/piyushk2005/Weather-App/blob/main/assets/preview%20of%20weather%20app.gif" alt="Weather App Demo" width="600" />
 </div>
 
 ---
