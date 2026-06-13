@@ -1,20 +1,34 @@
 /* ===== BASE ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
 .app {
   min-height: 100vh;
+  width: 100%;
   background: linear-gradient(135deg, #4c1d95, #1e1b4b, #0f172a);
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 30px 20px;
+  padding: 24px 16px;
 }
 
+/* ===== CONTAINER ===== */
 .container {
   width: 100%;
-  max-width: 480px;
+  max-width: 520px;
   background: rgba(255, 255, 255, 0.10);
   backdrop-filter: blur(20px);
-  border-radius: 30px;
-  padding: 30px;
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 28px;
+  padding: 28px 24px;
   border: 1px solid rgba(255,255,255,0.18);
   box-shadow: 0 20px 60px rgba(0,0,0,0.5);
 }
@@ -22,8 +36,8 @@
 .title {
   color: white;
   text-align: center;
-  margin-bottom: 22px;
-  font-size: 2rem;
+  margin-bottom: 20px;
+  font-size: clamp(1.5rem, 5vw, 2rem);
   font-weight: 700;
   letter-spacing: -0.5px;
 }
@@ -38,16 +52,18 @@
 
 .search-box {
   display: flex;
-  gap: 10px;
+  gap: 8px;
+  width: 100%;
 }
 
 .search-box input {
   flex: 1;
-  padding: 13px 16px;
+  min-width: 0;
+  padding: 13px 14px;
   border: none;
   border-radius: 14px;
   outline: none;
-  font-size: 15px;
+  font-size: clamp(13px, 3.5vw, 15px);
   background: rgba(255,255,255,0.92);
   color: #1e1b4b;
 }
@@ -56,13 +72,14 @@
   background: #facc15;
   color: #1e1b4b;
   border: none;
-  padding: 13px 18px;
+  padding: 13px 16px;
   border-radius: 14px;
   cursor: pointer;
   font-weight: 700;
-  font-size: 14px;
+  font-size: clamp(12px, 3vw, 14px);
   transition: transform 0.2s, background 0.2s;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .search-box button:hover {
@@ -77,7 +94,7 @@
   padding: 11px;
   border-radius: 14px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: clamp(12px, 3.5vw, 14px);
   font-weight: 600;
   transition: background 0.2s, transform 0.2s;
   width: 100%;
@@ -101,52 +118,54 @@
 }
 
 .weather-icon {
-  width: 120px;
+  width: clamp(80px, 25vw, 120px);
+  height: auto;
 }
 
 .city {
-  font-size: 1.7rem;
+  font-size: clamp(1.3rem, 5vw, 1.7rem);
   margin-top: 5px;
   font-weight: 700;
+  word-break: break-word;
 }
 
 .temperature {
-  font-size: 3.8rem;
+  font-size: clamp(2.8rem, 12vw, 3.8rem);
   font-weight: 800;
   line-height: 1.1;
 }
 
 .condition {
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 3.5vw, 1.1rem);
   text-transform: capitalize;
   opacity: 0.85;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .weather-details {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+  gap: 10px;
 }
 
 .detail-box {
   background: rgba(255,255,255,0.12);
-  padding: 15px;
+  padding: 14px 12px;
   border-radius: 16px;
   border: 1px solid rgba(255,255,255,0.1);
 }
 
 .detail-box span {
   display: block;
-  margin-bottom: 6px;
-  font-size: 12px;
+  margin-bottom: 5px;
+  font-size: clamp(10px, 2.5vw, 12px);
   opacity: 0.7;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .detail-box strong {
-  font-size: 17px;
+  font-size: clamp(14px, 4vw, 17px);
   font-weight: 700;
 }
 
@@ -154,20 +173,21 @@
 .tab-bar {
   display: flex;
   gap: 10px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .tab-btn {
   flex: 1;
-  padding: 11px;
+  padding: 11px 8px;
   border: 1px solid rgba(255,255,255,0.25);
   border-radius: 12px;
   background: rgba(255,255,255,0.08);
   color: rgba(255,255,255,0.65);
-  font-size: 14px;
+  font-size: clamp(12px, 3.5vw, 14px);
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
+  white-space: nowrap;
 }
 
 .tab-btn:hover {
@@ -188,7 +208,7 @@
 
 .forecast-title {
   color: rgba(255,255,255,0.7);
-  font-size: 13px;
+  font-size: clamp(11px, 2.5vw, 13px);
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 12px;
@@ -197,11 +217,12 @@
 /* ===== HOURLY ===== */
 .hourly-scroll {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   overflow-x: auto;
   padding-bottom: 8px;
   scrollbar-width: thin;
   scrollbar-color: rgba(255,255,255,0.2) transparent;
+  -webkit-overflow-scrolling: touch;
 }
 
 .hourly-scroll::-webkit-scrollbar {
@@ -214,11 +235,11 @@
 }
 
 .hourly-card {
-  flex: 0 0 80px;
+  flex: 0 0 clamp(68px, 18vw, 82px);
   background: rgba(255,255,255,0.10);
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: 16px;
-  padding: 12px 8px;
+  padding: 10px 6px;
   text-align: center;
   color: white;
   transition: background 0.2s;
@@ -229,23 +250,23 @@
 }
 
 .hourly-time {
-  font-size: 11px;
+  font-size: clamp(10px, 2.5vw, 11px);
   opacity: 0.7;
   margin-bottom: 4px;
 }
 
 .hourly-icon {
-  width: 44px;
-  height: 44px;
+  width: clamp(36px, 10vw, 44px);
+  height: clamp(36px, 10vw, 44px);
 }
 
 .hourly-temp {
-  font-size: 15px;
+  font-size: clamp(13px, 3.5vw, 15px);
   font-weight: 700;
 }
 
 .hourly-desc {
-  font-size: 10px;
+  font-size: clamp(9px, 2vw, 10px);
   opacity: 0.65;
   margin-top: 3px;
 }
@@ -254,17 +275,17 @@
 .daily-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .daily-card {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   background: rgba(255,255,255,0.10);
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: 16px;
-  padding: 12px 16px;
+  padding: 11px 14px;
   color: white;
   transition: background 0.2s;
 }
@@ -274,37 +295,43 @@
 }
 
 .daily-day {
-  font-size: 13px;
+  font-size: clamp(11px, 3vw, 13px);
   font-weight: 600;
-  width: 90px;
+  width: clamp(70px, 20vw, 90px);
   flex-shrink: 0;
 }
 
 .daily-icon {
-  width: 44px;
-  height: 44px;
+  width: clamp(36px, 10vw, 44px);
+  height: clamp(36px, 10vw, 44px);
+  flex-shrink: 0;
 }
 
 .daily-desc {
   flex: 1;
-  font-size: 12px;
+  font-size: clamp(10px, 2.5vw, 12px);
   opacity: 0.75;
   text-transform: capitalize;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .daily-temps {
   display: flex;
-  gap: 8px;
+  gap: 6px;
   font-weight: 700;
+  flex-shrink: 0;
 }
 
 .temp-high {
-  font-size: 15px;
+  font-size: clamp(13px, 3.5vw, 15px);
   color: #fde68a;
 }
 
 .temp-low {
-  font-size: 15px;
+  font-size: clamp(13px, 3.5vw, 15px);
   color: rgba(255,255,255,0.45);
 }
 
@@ -312,10 +339,11 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
-  font-size: 11px;
+  font-size: clamp(10px, 2.5vw, 11px);
   opacity: 0.65;
   text-align: right;
-  min-width: 60px;
+  min-width: 55px;
+  flex-shrink: 0;
 }
 
 /* ===== LOADER & ERROR ===== */
@@ -339,7 +367,7 @@
   color: #fca5a5;
   text-align: center;
   margin-top: 16px;
-  font-size: 14px;
+  font-size: clamp(12px, 3vw, 14px);
   background: rgba(239,68,68,0.15);
   border: 1px solid rgba(239,68,68,0.3);
   border-radius: 12px;
@@ -350,21 +378,60 @@
   to { transform: rotate(360deg); }
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 500px) {
-  .container {
-    padding: 22px 16px;
+/* ===== TABLET (601px - 900px) ===== */
+@media (min-width: 601px) and (max-width: 900px) {
+  .app {
+    padding: 30px 24px;
+    align-items: center;
   }
 
-  .temperature {
-    font-size: 3rem;
+  .container {
+    max-width: 560px;
+    padding: 30px 28px;
+  }
+}
+
+/* ===== DESKTOP (901px+) ===== */
+@media (min-width: 901px) {
+  .app {
+    align-items: center;
+    padding: 40px 24px;
+  }
+
+  .container {
+    max-width: 520px;
+    padding: 36px 32px;
   }
 
   .weather-details {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .hourly-card {
+    flex: 0 0 82px;
+  }
+}
+
+/* ===== SMALL MOBILE (max 380px) ===== */
+@media (max-width: 380px) {
+  .app {
+    padding: 16px 10px;
+  }
+
+  .container {
+    padding: 18px 14px;
+    border-radius: 20px;
+  }
+
+  .daily-extra {
+    display: none;
   }
 
   .daily-desc {
     display: none;
+  }
+
+  .weather-details {
+    grid-template-columns: 1fr 1fr;
   }
 }
