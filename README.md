@@ -27,29 +27,9 @@
 
 ## 📸 Screenshots
 
-<!-- ============================================================
-     HOW TO ADD SCREENSHOTS:
-
-     STEP 1 — Take screenshots of your app:
-       • Press Win + Shift + S to snip
-       • Save as: screenshot-home.png, screenshot-forecast.png etc.
-
-     STEP 2 — Add to assets/ folder in your project:
-       assets/
-       ├── demo.gif
-       ├── screenshot-home.png
-       └── screenshot-forecast.png
-
-     STEP 3 — Push to GitHub:
-           git add assets/
-           git commit -m "Add screenshots"
-           git push origin main
-
-     STEP 4 — Screenshots will appear below automatically ✅
-     ============================================================ -->
 
 <div align="center">
-  <img src="assets/screenshot-home.png" alt="Home Screen" width="45%" />
+  <img src="assets/Screenshot_20260613_173253.jpg.jpeg" alt="Home Screen" width="45%" />
   &nbsp;&nbsp;
   <img src="assets/screenshot-forecast.png" alt="Forecast Screen" width="45%" />
 </div>
