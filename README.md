@@ -1,20 +1,3 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
 <div align="center">
 
 <img src="public/icons.svg" alt="Weather App Logo" width="80" height="80" />
@@ -26,6 +9,7 @@ If you are developing a production application, we recommend using TypeScript wi
 [![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_Site-4A90D9?style=for-the-badge)](https://piyushk2005.github.io/Weather-App/)
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![OpenWeatherMap](https://img.shields.io/badge/OpenWeatherMap-API-orange?style=for-the-badge&logo=icloud&logoColor=white)](https://openweathermap.org/)
 [![GitHub Pages](https://img.shields.io/badge/Deployed-GitHub_Pages-222?style=for-the-badge&logo=github)](https://pages.github.com/)
 
 </div>
@@ -34,15 +18,75 @@ If you are developing a production application, we recommend using TypeScript wi
 
 ## 📽️ Demo
 
-```md
-[![Weather App Demo](https://github.com/piyushk2005/Weather-App/blob/main/assets/demo.gif.gif)
-```
+<!-- ============================================================
+     HOW TO ADD YOUR GIF/VIDEO:
+
+     STEP 1 — Record your screen:
+       • Windows: Press Win + G to open Xbox Game Bar → click Record
+       • Or use: https://screentogif.com (free, exports .gif directly)
+       • Or use: https://www.loom.com (free screen recorder)
+
+     STEP 2 — Convert to GIF (if needed):
+       • Upload MP4 to https://ezgif.com/video-to-gif
+       • Keep it under 10MB for GitHub to display properly
+       • Recommended size: 800x500px, 15fps
+
+     STEP 3 — Add to your repo:
+       • In VS Code, create a folder: assets/
+       • Put your file in: assets/demo.gif
+       • Run in terminal:
+           git add assets/demo.gif
+           git commit -m "Add demo gif"
+           git push origin main
+
+     STEP 4 — The line below will show it automatically ✅
+     ============================================================ -->
+
+<div align="center">
+  <img src="assets/demo.gif" alt="Weather App Demo" width="600" />
+</div>
+
+---
+
+## 📸 Screenshots
+
+<!-- ============================================================
+     HOW TO ADD SCREENSHOTS:
+
+     STEP 1 — Take screenshots of your app:
+       • Press Win + Shift + S to snip
+       • Save as: screenshot-home.png, screenshot-forecast.png etc.
+
+     STEP 2 — Add to assets/ folder in your project:
+       assets/
+       ├── demo.gif
+       ├── screenshot-home.png
+       └── screenshot-forecast.png
+
+     STEP 3 — Push to GitHub:
+           git add assets/
+           git commit -m "Add screenshots"
+           git push origin main
+
+     STEP 4 — Screenshots will appear below automatically ✅
+     ============================================================ -->
+
+<div align="center">
+  <img src="assets/screenshot-home.png" alt="Home Screen" width="45%" />
+  &nbsp;&nbsp;
+  <img src="assets/screenshot-forecast.png" alt="Forecast Screen" width="45%" />
+</div>
+
+---
 
 ## ✨ Features
 
 - 🔍 **Search any city** worldwide by name
-- 🌡️ **Real-time temperature** in Celsius/Fahrenheit
-- 💧 **Humidity & wind speed** data
+- 📍 **Current location** — auto-detect weather via GPS
+- ⏰ **24-hour forecast** — hourly weather for the next 24 hours
+- 📅 **5-day forecast** — daily high/low temps, humidity & wind
+- 🌡️ **Real-time temperature** in Celsius
+- 💧 **Humidity, wind speed, pressure & feels like** data
 - 🌥️ **Weather condition icons** (sunny, cloudy, rainy, etc.)
 - 📱 **Responsive design** — works on mobile & desktop
 - ⚡ **Fast & lightweight** — built with Vite
@@ -100,7 +144,7 @@ VITE_API_KEY=your_api_key_here
 npm run dev
 ```
 
-Then open [http://localhost:5173](http://localhost:5173) in your browser.
+Then open [http://localhost:5173/Weather-App/](http://localhost:5173/Weather-App/) in your browser.
 
 ---
 
@@ -123,15 +167,25 @@ npm run deploy
 
 ```
 Weather-App/
+├── assets/
+│   ├── demo.gif                  # Demo GIF for README
+│   ├── screenshot-home.png       # Screenshot 1
+│   └── screenshot-forecast.png  # Screenshot 2
 ├── public/
-│   └── icons.svg          # App favicon
+│   └── icons.svg                 # App favicon
 ├── src/
-│   ├── App.jsx            # Main app component
-│   ├── App.css            # Component styles
-│   ├── main.jsx           # React entry point
-│   └── index.css          # Global styles
-├── .env                   # Local API key (never commit!)
-├── .env.example           # Template for API key setup
+│   ├── components/
+│   │   ├── SearchBar.jsx         # Search + location button
+│   │   ├── WeatherCard.jsx       # Current weather display
+│   │   ├── HourlyForecast.jsx    # 24-hour forecast
+│   │   ├── DailyForecast.jsx     # 5-day forecast
+│   │   └── Loader.jsx            # Loading spinner
+│   ├── App.jsx                   # Main app component
+│   ├── App.css                   # Component styles
+│   ├── main.jsx                  # React entry point
+│   └── index.css                 # Global styles
+├── .env                          # Local API key (never commit!)
+├── .env.example                  # Template for API key setup
 ├── .gitignore
 ├── index.html
 ├── package.json
