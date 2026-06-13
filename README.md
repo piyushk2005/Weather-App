@@ -31,7 +31,7 @@
 <div align="center">
   <img src="assets/Screenshot_20260613_173253.jpg.jpeg" alt="Home Screen" width="45%" />
   &nbsp;&nbsp;
-  <img src="assets/screenshot-forecast.png" alt="Forecast Screen" width="45%" />
+  <img src="assets/Screenshot_20260613_173333.jpg.jpeg" alt="Forecast Screen" width="45%" />
 </div>
 
 ---
